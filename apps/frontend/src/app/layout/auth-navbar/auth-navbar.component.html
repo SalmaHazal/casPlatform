@@ -1,0 +1,47 @@
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+<nav class="absolute top-0 left-0 w-full z-50 flex flex-wrap items-center justify-between px-2 py-3 navbar-expand-lg bg-transparent ">
+  <div class="container px-4 mx-auto flex flex-wrap items-center justify-between">
+    <div class="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
+      <div class="flex items-center h-full -px-4 -mt-8">
+        <a [routerLink]="['/']" class="h-full flex items-center">
+          <img src="assets/logo.png" alt="Logo" style="height: 80px; width: auto; margin-top: 10px;">
+        </a>
+      </div>
+      
+    </div>
+    <div class="lg:flex flex-grow items-center lg:bg-transparent lg:shadow-none"
+         [ngClass]="{ 'block': navbarOpen, 'hidden': !navbarOpen }" id="example-navbar-warning">
+      
+      <ul class="flex flex-col lg:flex-row list-none lg:ml-auto">
+        
+        <li class="flex items-center">
+          <a class="hover:text-white text-white px-3 py-2 flex items-center text-xs uppercase font-bold"
+             href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdemos.creative-tim.com%2Fnotus-angular%2F" target="_blank">
+            <i class="text-white fab fa-facebook text-lg leading-lg"></i>
+            <span class="lg:hidden inline-block ml-2">Share</span>
+          </a>
+        </li>
+        <li class="flex items-center">
+          <a class="hover:text-white text-white px-3 py-2 flex items-center text-xs uppercase font-bold"
+             href="https://www.linkedin.com/" target="_blank">
+            <i class="text-white fab fa-linkedin text-lg leading-lg"></i>
+            <span class="lg:hidden inline-block ml-2">LinkedIn</span>
+          </a>
+        </li>
+        <li class="flex items-center">
+          <a class="hover:text-white text-white px-3 py-2 flex items-center text-xs uppercase font-bold"
+             href="https://www.instagram.com/" target="_blank">
+            <i class="text-white fab fa-instagram text-lg leading-lg"></i>
+            <span class="lg:hidden inline-block ml-2">Instagram</span>
+          </a>
+        </li>
+        <li class="flex items-center">
+          <a class="bg-white text-blueGray-700 active:bg-blueGray-50 text-sm font-bold uppercase px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3 ease-linear transition-all duration-150"
+             [routerLink]="['/auth/login']" type="button">
+            <i class="fas fa-arrow-alt-circle-down"></i> Sign in
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

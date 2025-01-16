@@ -2,11 +2,9 @@ import { Component, OnInit, inject } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { FaIconLibrary, FaConfig, FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { fontAwesomeIcons } from './shared/font-awesome-icons';
-import { NavbarComponent } from "./layout/navbar/navbar.component";
-import { FooterComponent } from "./layout/footer/footer.component";
 
 @Component({
-  imports: [RouterModule, FontAwesomeModule, FontAwesomeModule, NavbarComponent, FooterComponent],
+  imports: [RouterModule, FontAwesomeModule, FontAwesomeModule],
   selector: 'cas-root',
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',

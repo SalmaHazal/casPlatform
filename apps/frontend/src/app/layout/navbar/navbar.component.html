@@ -1,41 +1,46 @@
-<div class="navbar bg-base-100">
-  <div class="navbar-start">
-    <div class="dropdown">
-      <a class="btn btn-ghost text-xl">
-        <div class="border-1 bg-secondary logo p-2 rounded-xl" routerLink="/">CAS</div>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+<nav class="top-0 fixed z-50 w-full bg-white border-t border-gray-300 shadow-md h-16 flex items-center">
+  <div class="container mx-auto px-4 flex justify-between items-center">
+    <!-- Logo -->
+    <div class="flex items-center h-full -px-4 -mt-8">
+      <a [routerLink]="['/']" class="h-full flex items-center">
+        <img src="assets/cas png.png" alt="Logo" style="height: 95px; width: auto;">
       </a>
     </div>
-  </div>
 
-  <div class="navbar-center flex">
-    <div class="menu menu-sm sm:menu-lg menu-horizontal px-1">
-      <li><a href="/">Home</a></li>
-      <li>
-        <details #adminMenu>
-          <summary>Cells</summary>
-          <ul class="z-30">
-            <li><a href="/products">All</a></li>
-          </ul>
-        </details>
+    <!-- Menu principal centré -->
+    <div class="hidden lg:flex space-x-10">
+      <a [routerLink]="['/']" class="text-gray-700 text-sm uppercase hover:text-[#5dc4eb] font-semibold">
+        Home
+      </a>
+      <li class="flex items-center">
+        <app-index-dropdown class="block"></app-index-dropdown>
       </li>
     </div>
-  </div>
-  <div class="navbar-end pe-2 flex align-items-center">
-    <div class="dropdown dropdown-end pe-4">
-      <div tabindex="0" role="button">
-        <fa-icon [icon]="['fas', 'user']" class="menu-item"></fa-icon>
-      </div>
-      <ul class="dropdown-content menu menu-lg bg-base-100 rounded-box z-10 w-52 p-2 shadow">
-        <li>
-          <button class="link">Login</button>
-        </li>
-      </ul>
-    </div>
+    
 
-    <div class="dropdown dropdown-end me-2" routerLink="/cart">
-      <div tabindex="0" role="button">
-        <fa-icon [icon]="['fas', 'cart-shopping']" class="menu-item"></fa-icon>
-      </div>
+    <!-- Menu utilisateur et social -->
+    <div class="flex items-center space-x-4">
+      <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdemos.creative-tim.com%2Fnotus-angular%2F" 
+         target="_blank" class="text-gray-500 hover:text-[#5dc4eb]">
+        <i class="fab fa-facebook text-lg"></i>
+      </a>
+      <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fdemos.creative-tim.com%2Fnotus-angular%2F&text=Start%20your%20development..." 
+         target="_blank" class="text-gray-500 hover:text-[#5dc4eb]">
+         <i class=" fab fa-linkedin text-lg leading-lg"></i>
+      </a>
+      <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fdemos.creative-tim.com%2Fnotus-angular%2F&text=Start%20your%20development..." 
+         target="_blank" class="text-gray-500 hover:text-[#5dc4eb]">
+         <i class=" fab fa-instagram text-lg leading-lg"></i>
+      </a>
+      <a [routerLink]="['/auth/login']" class="text-white text-sm px-4 py-2 rounded hover:bg-red-700" style="background-color: #5dc4eb;">
+        <i class="fas fa-sign-in-alt"></i> Sign Up
+      </a>
+      
     </div>
   </div>
-</div>
+</nav>
+
+
+
+
