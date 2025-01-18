@@ -1,0 +1,70 @@
+<link
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+  rel="stylesheet"
+/>
+
+<nav class="md:left-0 md:block md:fixed md:top-0 md:bottom-0 md:overflow-y-auto md:flex-row md:flex-nowrap md:overflow-hidden shadow-xl bg-white flex flex-wrap items-center justify-between relative md:w-64 z-10 py-4 px-6">
+  <div class="md:flex-col md:items-stretch md:min-h-full md:flex-nowrap px-0 flex flex-wrap items-center justify-between w-full mx-auto">
+    <!-- Toggler -->
+    <button class="cursor-pointer text-black opacity-50 md:hidden px-3 py-1 text-xl leading-none bg-transparent rounded border border-solid border-transparent" type="button" (click)="toggleCollapseShow('bg-white m-2 py-3 px-6')">
+      <i class="fas fa-bars"></i>
+    </button>
+    <!-- Brand -->
+    <a [routerLink]="['/']" class="md:block text-left md:pb-2 text-blueGray-600 mr-0 inline-block whitespace-nowrap text-sm uppercase font-bold p-4 px-0">
+      <img src="assets/loo.png" alt="Logo" class="hidden sm:block mx-auto w-auto h-32 mt-[-58px]" /> <!-- Déplacer l'image vers le haut -->
+    </a>
+    
+    <!-- Collapse -->
+    <div class="md:flex md:flex-col md:items-stretch md:opacity-100 md:relative md:mt-4 md:shadow-none shadow absolute top-0 left-0 right-0 z-40 overflow-y-auto overflow-x-hidden h-auto items-center flex-1 rounded" [ngClass]="collapseShow">
+
+      <hr class="my-4 md:min-w-full" />
+      <!-- Overview -->
+      <h6 class="md:min-w-full text-gray-600 text-sm uppercase font-semibold block pt-1 pb-4 no-underline">Overview</h6>
+      <ul class="md:flex-col md:min-w-full flex flex-col list-none">
+        <li class="items-center my-1">
+          <a [routerLink]="['/admin/dashboard']" class="text-[12px] uppercase py-1 font-semibold block" routerLinkActive #adminDashboard="routerLinkActive" [ngClass]="adminDashboard.isActive ? 'text-red-600 hover:text-[#87CEEB]' : 'text-gray-500 hover:text-[#87CEEB]'">
+            <i class="fas fa-tachometer-alt mr-1 text-[9px]" [ngClass]="adminDashboard.isActive ? 'opacity-75' : 'text-gray-300'"></i> Dashboard
+          </a>
+        </li>
+      </ul>
+      <hr class="my-4 md:min-w-full" />
+
+      <!-- Sponsor Management -->
+      <h6 class="md:min-w-full text-gray-600 text-sm uppercase font-semibold block pt-1 pb-4 no-underline">Sponsor Management</h6>
+      <ul class="md:flex-col md:min-w-full flex flex-col list-none">
+        <li class="items-center my-1">
+          <a [routerLink]="['/auth/login']" class="text-[12px] uppercase py-1 font-bold block" routerLinkActive #authLogin="routerLinkActive" [ngClass]="authLogin.isActive ? 'text-red-600 hover:text-[#87CEEB]' : 'text-gray-500 hover:text-[#87CEEB]'">
+            <i class="fas fa-search mr-1 text-[9px]" [ngClass]="authLogin.isActive ? 'opacity-75' : 'text-blueGray-300'"></i> Search
+          </a>
+        </li>
+        <li class="items-center my-1">
+          <a [routerLink]="['/auth/register']" class="text-[12px] uppercase py-1 font-bold block" routerLinkActive #authRegister="routerLinkActive" [ngClass]="authRegister.isActive ? 'text-red-600 hover:text-[#87CEEB]' : 'text-gray-500 hover:text-[#87CEEB]'">
+            <i class="fas fa-history mr-1 text-[9px]" [ngClass]="authRegister.isActive ? 'opacity-75' : 'text-blueGray-300'"></i> History
+          </a>
+        </li>
+      </ul>
+      <hr class="my-4 md:min-w-full" />
+
+      <!-- Account & Notifications -->
+      <h6 class="md:min-w-full text-gray-600 text-sm uppercase font-semibold block pt-1 pb-4 no-underline">Account & Notifications</h6>
+      <ul class="md:flex-col md:min-w-full flex flex-col list-none md:mb-4">
+        <li class="items-center my-1">
+          <a [routerLink]="['/landing']" class="text-[12px] uppercase py-1 font-bold block" routerLinkActive #noLayoutLanding="routerLinkActive" [ngClass]="noLayoutLanding.isActive ? 'text-red-600 hover:text-[#87CEEB]' : 'text-gray-500 hover:text-[#87CEEB]'">
+            <i class="fas fa-user-circle mr-1 text-[9px]" [ngClass]="noLayoutLanding.isActive ? 'opacity-75' : 'text-blueGray-300'"></i> Profile
+          </a>
+        </li>
+        <li class="items-center my-1">
+          <a [routerLink]="['/profile']" class="text-[12px] uppercase py-1 font-bold block" routerLinkActive #noLayoutProfile="routerLinkActive" [ngClass]="noLayoutProfile.isActive ? 'text-red-600 hover:text-[#87CEEB]' : 'text-gray-500 hover:text-[#87CEEB]'">
+            <i class="fas fa-cogs mr-1 text-[9px]" [ngClass]="noLayoutProfile.isActive ? 'opacity-75' : 'text-blueGray-300'"></i> Settings
+          </a>
+        </li>
+        <li class="items-center my-1">
+          <a [routerLink]="['/profile']" class="text-[12px] uppercase py-1 font-bold block" routerLinkActive #noLayoutProfile="routerLinkActive" [ngClass]="noLayoutProfile.isActive ? 'text-red-600 hover:text-[#87CEEB]' : 'text-gray-500 hover:text-[#87CEEB]'">
+            <i class="fas fa-bell mr-1 text-[9px]" [ngClass]="noLayoutProfile.isActive ? 'opacity-75' : 'text-blueGray-300'"></i> Notifications
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
