@@ -23,21 +23,30 @@ export class LoginComponent {
     email: '',
     password: '',
   };
+  loginError: string | null = null;
 
   constructor(private http: HttpClient, private router: Router) {}
 
   onLogin(form: any) {
     if (form.valid) {
       this.http
-        .post('http://localhost:8090/api/v1/user/login', this.user, { responseType: 'text' })
+        .post('http://localhost:8090/api/v1/user/login', this.user, { responseType: 'json' })
         .subscribe({
-          next: (response) => {
+          next: (response: any) => {
             console.log('User signed in successfully', response);
-            this.router.navigate(['/second-page']);
+            if (response.status) {
+              this.router.navigate(['/second-page']);
+            } else {
+              this.loginError = response.message; 
+            }
           },
-          error: (error) => console.error('Error signing in user', error),
+          error: (error) => {
+            console.error('Error signing in user', error);
+            this.loginError = 'An error occurred during login';
+          },
           complete: () => console.log('login request completed'),
         });
     }
   }
+  
 }

@@ -64,6 +64,7 @@
               </label>
             </div>
             <div class="text-center mt-4">
+              <div *ngIf="loginError" class="error-message text-red-600">{{ loginError }}</div>
               <button
                 class="bg-[#202c3c] text-white active:bg-[#002244] text-sm font-bold uppercase px-5 py-2 rounded shadow hover:shadow-lg outline-none focus:outline-none w-full ease-linear transition-all duration-150"
                 type="submit"
