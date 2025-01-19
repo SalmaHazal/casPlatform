@@ -9,11 +9,15 @@
       </div>
       <div class="mt-4 flex justify-center">
         <!-- Contact Button -->
-        <button 
+        <button (click)="showContactModal()"
           class="bg-[#5cc4ed] text-white px-4 py-2 rounded-md hover:bg-[#4bb8d3] transition duration-200">
           Contact
         </button>
+
       </div>
     </div>
   </div>
+
+  <app-contact-modal [isVisible]="isModalVisible"></app-contact-modal>
+  
   

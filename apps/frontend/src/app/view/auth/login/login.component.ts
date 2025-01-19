@@ -35,7 +35,7 @@ export class LoginComponent {
           next: (response: any) => {
             console.log('User signed in successfully', response);
             if (response.status) {
-              this.router.navigate(['/second-page']);
+              this.router.navigate(['/page-with-navbar-sidebar']);
             } else {
               this.loginError = response.message; 
             }

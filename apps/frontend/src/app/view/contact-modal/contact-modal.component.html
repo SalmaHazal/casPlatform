@@ -1,0 +1,16 @@
+<div class="fixed inset-0 bg-gray-500 bg-opacity-50 flex items-center justify-center z-50" *ngIf="isVisible">
+    <div class="bg-white p-6 rounded-lg shadow-lg w-96">
+      <h3 class="text-xl font-semibold text-gray-800">Contact Chef Sponsoring</h3>
+      <form class="mt-4">
+        <div>
+          <label for="message" class="block text-sm font-semibold text-gray-700">Message</label>
+          <textarea id="message" rows="4" class="w-full p-2 border border-gray-300 rounded-md mt-2" placeholder="Write your message here..."></textarea>
+        </div>
+        <div class="mt-4 flex justify-end">
+          <button type="button" (click)="close()" class="bg-gray-500 text-white px-4 py-2 rounded-md hover:bg-gray-400">Cancel</button>
+          <button type="submit" class="bg-[#5cc4ed] text-white px-4 py-2 rounded-md hover:bg-[#4bb8d3] ml-2">Send</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  

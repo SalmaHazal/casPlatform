@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ContactModalComponent } from '../contact-modal/contact-modal.component';
 
 @Component({
   selector: 'app-company-card',
-  imports: [CommonModule],
+  imports: [CommonModule, ContactModalComponent],
   templateUrl: './potential-sponsors.component.html',
   styleUrls: ['./potential-sponsors.component.css']
 })
@@ -2181,4 +2182,9 @@ export class PotentialSponsorsComponent {
       "Address": "14 av michlifen magasin n3 - Rabat"
     },
   ];
+  isModalVisible = false;
+
+  showContactModal() {
+    this.isModalVisible = true;
+  }
 }
