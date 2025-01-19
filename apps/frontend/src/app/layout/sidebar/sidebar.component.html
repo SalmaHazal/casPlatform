@@ -47,6 +47,11 @@
             <i class="fas fa-user-plus mr-1 text-[9px]" [ngClass]="sponsorsToContact.isActive ? 'opacity-75' : 'text-blueGray-300'"></i> Sponsors to Contact
           </a>
         </li>
+        <li class="items-center my-1">
+          <a [routerLink]="['/page-with-navbar-sidebar/potentialSponsors']" class="text-[12px] uppercase py-1 font-bold block" routerLinkActive #potentialSponsors="routerLinkActive" [ngClass]="potentialSponsors.isActive ? 'text-[#5cc4ec] hover:text-[#87CEEB]' : 'text-gray-500 hover:text-[#87CEEB]'">
+            <i class="fas fa-user-plus mr-1 text-[9px]" [ngClass]="potentialSponsors.isActive ? 'opacity-75' : 'text-blueGray-300'"></i> potential Sponsors
+          </a>
+        </li>
       </ul>
       <hr class="my-4 md:min-w-full" />
 

@@ -13,7 +13,7 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
 })
 export class SidebarComponent {
   collapseShow = 'hidden';
-  currentRoute: string = '';
+  currentRoute = '';
 
   constructor(private router: Router) {
     this.router.events

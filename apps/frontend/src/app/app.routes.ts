@@ -7,6 +7,7 @@ import { SponsorsComponent } from './view/admin/sponsors/sponsors.component';
 import { PageWithNavbarSidebarComponent } from './view/page-with-navbar-sidebar/page-with-navbar-sidebar.component';
 import { SignUpComponent } from './view/auth/sign-up/sign-up.component';
 import { DashboardComponent } from './view/admin/dashboard/dashboard.component';
+import { PotentialSponsorsComponent } from './view/potentialSponsors/potential-sponsors.component';
 
 export const appRoutes: Route[] = [
   // Route principale
@@ -26,6 +27,7 @@ export const appRoutes: Route[] = [
       { path: 'dashboard', component: DashboardComponent },
       { path: 'sponsors', component: SponsorsComponent },
       { path: '', redirectTo: 'dashboard', pathMatch: 'full' }, // Redirige vers "dashboard" par défaut
+      { path: 'potentialSponsors', component: PotentialSponsorsComponent },
     ],
   },
 

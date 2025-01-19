@@ -172,30 +172,30 @@
     <div class="flex flex-wrap justify-center lg:-mt-64 -mt-48">
       <div class="w-full lg:w-6/12 px-4">
         <div class="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-gray-300">
-          <div class="flex-auto p-5 lg:p-10">
+          <form (ngSubmit)="onSubmit()" #form="ngForm" class="flex-auto p-5 lg:p-10">
             <p class="leading-relaxed mt-1 mb-4 text-gray-500"> <!-- Couleur modérée text-gray-500 -->
               Complete the form below, and we will get back to you within 24 hours to discuss partnership opportunities.
             </p>
             <div class="relative w-full mb-3 mt-8">
               <label class="block uppercase text-gray-500 text-sm font-bold mb-2" htmlFor="full-name">Full Name</label> <!-- Couleur modérée text-gray-500 -->
-              <input type="text" class="border-0 px-3 py-3 placeholder-gray-400 text-gray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150" placeholder="Full Name" />
+              <input [(ngModel)]="formData.userName" name="userName" type="text" class="border-0 px-3 py-3 placeholder-gray-400 text-gray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150" placeholder="Full Name" />
             </div>
 
             <div class="relative w-full mb-3">
               <label class="block uppercase text-gray-500 text-sm font-bold mb-2" htmlFor="email">Email</label> <!-- Couleur modérée text-gray-500 -->
-              <input type="email" class="border-0 px-3 py-3 placeholder-gray-400 text-gray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150" placeholder="Email" />
+              <input [(ngModel)]="formData.userEmail" name="userEmail" type="email" class="border-0 px-3 py-3 placeholder-gray-400 text-gray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150" placeholder="Email" />
             </div>
 
             <div class="relative w-full mb-3">
               <label class="block uppercase text-gray-500 text-sm font-bold mb-2" htmlFor="message">Message</label> <!-- Couleur modérée text-gray-500 -->
-              <textarea rows="4" cols="80" class="border-0 px-3 py-3 placeholder-gray-400 text-gray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full" placeholder="Type a message about your potential partnership..."></textarea>
+              <textarea [(ngModel)]="formData.userMessage" name="userMessage" rows="4" cols="80" class="border-0 px-3 py-3 placeholder-gray-400 text-gray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full" placeholder="Type a message about your potential partnership..."></textarea>
             </div>
             <div class="text-center mt-6">
-              <button class="bg-blueGray-800 text-white active:bg-blueGray-600 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150" type="button">
+              <button (click)="showForm = true; logMessage('Button clicked!')" type="submit" class="bg-blueGray-800 text-white active:bg-blueGray-600 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150">
                 Send Message
               </button>
             </div>
-          </div>
+          </form>
         </div>
       </div>
     </div>
