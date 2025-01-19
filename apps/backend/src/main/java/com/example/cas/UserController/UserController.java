@@ -3,6 +3,7 @@ package com.example.cas.UserController;
 
 import com.example.cas.Dto.LoginDTO;
 import com.example.cas.Dto.UserDTO;
+import com.example.cas.Entity.User;
 import com.example.cas.Service.UserService;
 import com.example.cas.response.LoginResponse;
 import org.springframework.beans.factory.annotation.Autowired;

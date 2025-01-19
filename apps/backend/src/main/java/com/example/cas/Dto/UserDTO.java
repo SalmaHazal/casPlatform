@@ -1,66 +1,62 @@
 package com.example.cas.Dto;
 
-
 public class UserDTO {
 
-    private int userID;
+  private int userId;
+  private String userName;
+  private String email;
+  private String password;
+  private String cell;
 
-    private String userName;
+  public UserDTO() {
+  }
 
-    private String email;
+  public UserDTO(int userId, String userName, String email, String password, String cell) {
+    this.userId = userId;
+    this.userName = userName;
+    this.email = email;
+    this.password = password;
+    this.cell = cell;
+  }
 
-    private String password;
+  public int getUserID() {
+    return userId;
+  }
 
+  public void setUserID(int userId) {
+    this.userId = userId;
+  }
 
-    public UserDTO(int userID, String userName, String email, String password) {
-        this.userID = userID;
-        this.userName = userName;
-        this.email = email;
-        this.password = password;
-    }
+  public String getUserName() {
+    return userName;
+  }
 
-    public UserDTO() {
-    }
+  public void setUserName(String userName) {
+    this.userName = userName;
+  }
 
-    public int getUserID() {
-        return userID;
-    }
+  public String getEmail() {
+    return email;
+  }
 
-    public void setUserID(int userID) {
-        this.userID = userID;
-    }
+  public void setEmail(String email) {
+    this.email = email;
+  }
 
-    public String getUserName() {
-        return userName;
-    }
+  public String getPassword() {
+    return password;
+  }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
-    }
+  public void setPassword(String password) {
+    this.password = password;
+  }
 
-    public String getEmail() {
-        return email;
-    }
+  public String getCell() {
+    return cell;
+  }
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
+  public void setCell(String cell) {
+    this.cell = cell;
+  }
 
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    @Override
-    public String toString() {
-        return "UserDTO{" +
-                "userID=" + userID +
-                ", userName='" + userName + '\'' +
-                ", email='" + email + '\'' +
-                ", password='" + password + '\'' +
-                '}';
-    }
 }

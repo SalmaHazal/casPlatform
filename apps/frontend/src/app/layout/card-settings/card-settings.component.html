@@ -1,0 +1,42 @@
+<div class="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-gray-100 border-0">
+    <div class="rounded-t bg-white mb-0 px-6 py-6">
+      <div class="flex justify-between items-center">
+        <h2 class="text-gray-700 text-lg font-semibold">Sponsors to Contact</h2>
+        <!-- Affichage du nombre de sponsors -->
+        <span class=" text-blue-300 text-xs font-normal">
+          {{ sponsors.length }} Sponsors
+        </span>
+      </div>
+    </div>
+    <div class="flex-auto px-4 lg:px-10 py-10 pt-0">
+      <div class="text-gray-400 text-sm mt-3 mb-6 font-bold uppercase">
+        <h6>Sponsor List</h6>
+      </div>
+      <div class="flex flex-col space-y-4">
+        <!-- Si la liste est vide -->
+        <p class="text-gray-500 text-center" *ngIf="sponsors.length === 0">
+          No sponsors to contact!
+        </p>
+  
+        <!-- Liste des sponsors -->
+        <div *ngFor="let sponsor of sponsors">
+          <div class="flex items-center justify-between bg-white p-4 rounded shadow hover:shadow-md transition duration-150 ease-linear">
+            <div>
+              <p class="text-gray-700 font-bold text-sm">{{ sponsor.name }}</p>
+              <p class="text-gray-500 text-sm">Sector: {{ sponsor.sector }}</p>
+              <p class="text-gray-500 text-sm">Address: {{ sponsor.address }}</p>
+            </div>
+            <button
+              class="bg-[#5cc4ec] text-white active:bg-red-700 font-semibold uppercase text-[13px] px-3 py-1 rounded shadow hover:shadow-md outline-none focus:outline-none ease-linear transition-all duration-150"
+              type="button"
+              (click)="contactSponsor(sponsor)"
+            >
+              Contact
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  

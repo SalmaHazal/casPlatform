@@ -7,6 +7,7 @@ import com.example.cas.Repo.UserRepo;
 import com.example.cas.Service.UserService;
 import com.example.cas.response.LoginResponse;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -22,18 +23,19 @@ public class UserIMPL implements UserService {
     private PasswordEncoder passwordEncoder;
 
     @Override
-    public String addUser(UserDTO userDTO) {
+    public  String addUser(UserDTO userDTO) {
 
         User user = new User(
                 userDTO.getUserID(),
                 userDTO.getUserName(),
                 userDTO.getEmail(),
-                this.passwordEncoder.encode(userDTO.getPassword())
+                this.passwordEncoder.encode(userDTO.getPassword()),
+                userDTO.getCell()
         );
 
         userRepo.save(user);
 
-        return user.getUserName();
+      return "successfully added user";
     }
 
     @Override

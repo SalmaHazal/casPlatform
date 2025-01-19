@@ -1,0 +1,69 @@
+<!-- Header -->
+<div class="relative bg-[#5cc4ec] md:pt-32 pb-48 pt-8 -mr-32 ml-24 mt-[-4rem]">
+  <div class="px-4 md:px-10 mx-auto max-w-[calc(100%-16rem)]">
+    <div>
+      <!-- Card stats -->
+      <div class="flex flex-wrap">
+        <div class="w-full lg:w-6/12 xl:w-3/12 px-4">
+          <div class="h-full flex flex-col">
+            <app-card-stats
+              statSubtitle="TOTAL SPONSORS"
+              statTitle="120"
+              statArrow="up"
+              [statPercent]="5.48"
+              statPercentColor="text-emerald-500"
+              statDescription="Since last month"
+              statIconName="fas fa-users"
+              statIconColor="bg-blue-500"
+            ></app-card-stats>
+          </div>
+        </div>
+        <div class="w-full lg:w-6/12 xl:w-3/12 px-4">
+          <div class="h-full flex flex-col">
+            <app-card-stats
+              statSubtitle="ACTIVE SPONSORS"
+              statTitle="80"
+              statArrow="down"
+              [statPercent]="1.48"
+              statPercentColor="text-red-500"
+              statDescription="Since last week"
+              statIconName="fas fa-check-circle"
+              statIconColor="bg-green-500"
+            ></app-card-stats>
+          </div>
+        </div>
+        <div class="w-full lg:w-6/12 xl:w-3/12 px-4">
+          <div class="h-full flex flex-col">
+            <app-card-stats
+              statSubtitle="PENDING CONTRACTS"
+              statTitle="15"
+              statArrow="up"
+              [statPercent]="10.50"
+              statPercentColor="text-emerald-500"
+              statDescription="Since last month"
+              statIconName="fas fa-clock"
+              statIconColor="bg-yellow-500"
+            ></app-card-stats>
+          </div>
+        </div>
+        <div class="w-full lg:w-6/12 xl:w-3/12 px-4">
+          <div class="h-full flex flex-col">
+            <app-card-stats
+              statSubtitle="NEW LEADS"
+              statTitle="200"
+              statArrow="down"
+              [statPercent]="3.15"
+              statPercentColor="text-orange-500"
+              statDescription="Since yesterday"
+              statIconName="fas fa-bell"
+              statIconColor="bg-orange-500"
+            ></app-card-stats>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  

@@ -22,7 +22,7 @@
       <h6 class="md:min-w-full text-gray-600 text-sm uppercase font-semibold block pt-1 pb-4 no-underline">Overview</h6>
       <ul class="md:flex-col md:min-w-full flex flex-col list-none">
         <li class="items-center my-1">
-          <a [routerLink]="['/admin/dashboard']" class="text-[12px] uppercase py-1 font-semibold block" routerLinkActive #adminDashboard="routerLinkActive" [ngClass]="adminDashboard.isActive ? 'text-red-600 hover:text-[#87CEEB]' : 'text-gray-500 hover:text-[#87CEEB]'">
+          <a [routerLink]="['/page-with-navbar-sidebar/dashboard']" class="text-[12px] uppercase py-1 font-semibold block" routerLinkActive #adminDashboard="routerLinkActive" [ngClass]="adminDashboard.isActive ? 'text-[#5cc4ec] hover:text-[#87CEEB]' : 'text-gray-500 hover:text-[#87CEEB]'">
             <i class="fas fa-tachometer-alt mr-1 text-[9px]" [ngClass]="adminDashboard.isActive ? 'opacity-75' : 'text-gray-300'"></i> Dashboard
           </a>
         </li>
@@ -40,6 +40,11 @@
         <li class="items-center my-1">
           <a [routerLink]="['/auth/register']" class="text-[12px] uppercase py-1 font-bold block" routerLinkActive #authRegister="routerLinkActive" [ngClass]="authRegister.isActive ? 'text-red-600 hover:text-[#87CEEB]' : 'text-gray-500 hover:text-[#87CEEB]'">
             <i class="fas fa-history mr-1 text-[9px]" [ngClass]="authRegister.isActive ? 'opacity-75' : 'text-blueGray-300'"></i> History
+          </a>
+        </li>
+        <li class="items-center my-1">
+          <a [routerLink]="['/page-with-navbar-sidebar/sponsors']" class="text-[12px] uppercase py-1 font-bold block" routerLinkActive #sponsorsToContact="routerLinkActive" [ngClass]="sponsorsToContact.isActive ? 'text-[#5cc4ec] hover:text-[#87CEEB]' : 'text-gray-500 hover:text-[#87CEEB]'">
+            <i class="fas fa-user-plus mr-1 text-[9px]" [ngClass]="sponsorsToContact.isActive ? 'opacity-75' : 'text-blueGray-300'"></i> Sponsors to Contact
           </a>
         </li>
       </ul>
@@ -67,4 +72,5 @@
     </div>
   </div>
 </nav>
+
 
